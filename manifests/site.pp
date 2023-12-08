@@ -3,9 +3,16 @@ node default {
     ensure  => file,
     content => 'This is a readme',
     owner   => 'root',
-  }
+  } 
 }
 node 'ubuntu-22.04' {
   include role::master_server
 }
   
+node /^web/ {
+  include role::app_server
+}
+
+node /^db/ {
+  include role::db_server
+}
