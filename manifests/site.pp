@@ -5,3 +5,7 @@ node default {
     owner   => 'root',
   }
 }
+node 'ubuntu-22.04' {
+  include role::master_server
+}
+  
