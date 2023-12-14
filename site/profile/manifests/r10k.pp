@@ -1,5 +1,5 @@
 class profile::r10k {
   class {'r10k':
-  remote => 'https://github.com/johnrgithub/control-repo',
+  remote => 'git@github.com:johnrgithub/control-repo.git',
   }
 }
