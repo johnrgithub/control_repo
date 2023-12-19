@@ -10,6 +10,7 @@ node 'ubuntu-22.04' {
   file {'/etc/secret_password.txt':
     ensure => file,
     content => lookup('secret_password'),
+  }
 }
   
 node /^web/ {
