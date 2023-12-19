@@ -7,6 +7,9 @@ node default {
 }
 node 'ubuntu-22.04' {
   include role::master_server
+  file {'/etc/secret_password.txt':
+    ensure => file,
+    content => lookup('secret_password'),
 }
   
 node /^web/ {
